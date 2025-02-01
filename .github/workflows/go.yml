@@ -31,5 +31,5 @@ jobs:
 
     - name: Test client
       run: |
-        cd client
+        cd client-cli
         go test ./tests
