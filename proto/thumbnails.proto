@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "/proto";
+
+message GetThumbnailRequest {
+    string URL = 1;
+}
+
+message GetThumbnailResponse {
+    string error = 1;
+    bytes thumbnail = 2;
+}
+
+service YoutubeThumbnails {
+    rpc GetThumbnail(GetThumbnailRequest) returns (GetThumbnailResponse);
+}
+
